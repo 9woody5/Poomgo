@@ -1,0 +1,32 @@
+.blind{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+body{overflow-x: hidden}
+
+.inner{
+    max-width: 1224px;
+    margin: 0 auto;
+}
+::selection{
+    background: #0039ba;
+    color: #fff;
+}
+
+@media all and (max-width:1300px){
+    .inner{
+        max-width: 704px;
+        margin: 0 auto;
+    }
+}
+@media all and (max-width:750px){
+    .inner{
+    max-width: 327px;
+    margin: 0 auto;
+    }
+}
