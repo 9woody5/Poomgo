@@ -32,7 +32,7 @@ $(function(){
      * @author 정우진
      */
 
-    //nav 영역 focus 구현
+    //탭영역 nav focus 구현
     $('.skill-item').click(function(e){
         e.preventDefault();
 
@@ -46,13 +46,6 @@ $(function(){
         if ($('.move').width() >= 0) {
             $(this).addClass('active').siblings().removeClass('active');
         }
-
-    //content 화면 전환
-        // $('.skill-item a').click(function(){
-        //     $(this).addClass('active')
-        //     const target = $(this).data('target');
-        //     $(target).addClass('active').siblings().removeClass('active');
-        // });
         
     })
 
@@ -81,8 +74,7 @@ $(function(){
     }
     
 
-    //gsap 배너 영역
-
+    //gsap 슬라이드 영역
     ScrollTrigger.matchMedia({
 
         //large
@@ -103,6 +95,7 @@ $(function(){
 
     //페이드업 영역
 
+    //단순 페이드업
     $('[data-fade').each(function(i,l){
         gsap.from(l,{
             scrollTrigger:{
@@ -116,6 +109,23 @@ $(function(){
             yPercent:20,
         })
     })
+
+    //순차적 페이드업
+    $('[data-child]').each(function(i,l){
+        child = $(this).find('> *')
+        gsap.from(child,{
+            scrollTrigger:{
+                trigger:l, //[기준]
+                start:"top 90%",  //[기준시작점][윈도우시작점]   0% -> top or 100% -> bottom
+                end:"bottom 90%", //[기준끝점][윈도우끝점]
+                // markers:true,
+                // scrub:1
+            },
+            opacity:0,
+            yPercent:20,
+            stagger:0.1
+        })
+      })
 
     $('.function-list').each(function(i,l){
         gsap.from(l,{
