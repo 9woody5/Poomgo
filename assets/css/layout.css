@@ -315,7 +315,6 @@
     letter-spacing: -0.3px;
     color: #4d5968;
 }
-.f-menu .f-list{}
 .f-menu .f-item{
     margin-top: 16px;
     font-weight: 400;
@@ -352,7 +351,6 @@
     margin: 0 4px;
     vertical-align: -1px;
 }
-.sns-area{}
 .sns-area .sns-list{
     display: flex;
 }

@@ -103,7 +103,6 @@
 .banner-area .swiper{
     height: inherit;
 }
-.banner-area .swiper-wrapper{}
 .banner-area .swiper-slide{
     background: #3e4955;
     text-align: center;
@@ -291,9 +290,23 @@
         margin-left: 8px;
     }
 }
-@media (min-width:600px) and (max-width:820px){
+@media (min-width:320px) and (max-width:750px){
     .sc-main .banner-area{
-        padding-left: 50px;
+        padding: 0;
+    }
+    .banner-area .swiper-slide .link-pr{
+        display: none;
+    }
+    .banner-area .navi-box{
+        display: none;
+    }
+    .banner-area .swiper-slide a{
+        justify-content: center;
+    }
+}
+@media (min-width:320px) and (max-width:820px){
+    .sc-main .banner-area{
+        /* padding-left: 50px; */
     }
 }
 @media all and (max-width:600px){
@@ -623,9 +636,6 @@
 }
 
 @media all and (max-width:750px){
-    .sc-experience{
-
-    }
     .sc-experience .group-list{
         width: 327px;
         display: flex;
@@ -768,15 +778,12 @@
     text-align: center;
     color: #8e9daa;
 }
-.sc-skills .skill-item a.active{}
 .sc-skills .skill-item a:hover{
     color: #0040d1;
 }
 .sc-skills .skill-item.active a{
     font-weight: 700;
     color: #0040d1;
-}
-.sc-skills .tab-contents{
 }
 .sc-skills .cont{
     padding: 80px 0 0 80px;
@@ -1047,8 +1054,6 @@
         letter-spacing: -0.3px;
     }
 }
-
-.sc-solution{}
 .sc-solution section{
     position: relative;
     padding: 150px 0;
